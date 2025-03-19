@@ -8,7 +8,7 @@
 
 / {
     behaviors {
-      #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "version.dtsi"
 
         hm: homerow_mods {
@@ -20,6 +20,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         rpi: require_prior_idle {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -37,11 +38,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2            &kp N3        &kp N4            &kp N5  &none                                                                &none                  &kp N6  &kp N7    &kp N8     &kp N9   &kp N0     &kp BACKSPACE
-&kp TAB    &kp Q   &kp W             &kp E         &kp R             &kp T   &none                                                                &none                  &kp Y   &kp U     &kp I      &kp O    &kp P      &kp BSLH
-&kp ESC    &kp A   &kp S             &kp D         &kp F             &kp G   &kp LEFT_PARENTHESIS  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp RIGHT_PARENTHESIS  &kp H   &kp J     &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z   &kp X             &kp C         &kp V             &kp B                                    &kp HOME      &kp PG_UP                                    &kp N   &kp M     &kp COMMA  &kp DOT  &kp FSLH   &kp ENTER
-&none      &none   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND          &kp BSPC              &mo 1      &kp END       &kp PG_DN  &mo 2      &kp SPACE                      &kp LEFT  &kp DOWN   &kp UP   &kp RIGHT  &none
+&kp GRAVE  &kp N1               &kp N2               &kp N3           &kp N4             &kp N5  &none                                                                &none                  &kp N6  &kp N7              &kp N8            &kp N9                &kp N0                   &kp BACKSPACE
+&kp TAB    &kp Q                &kp W                &kp E            &kp R              &kp T   &none                                                                &none                  &kp Y   &kp U               &kp I             &kp O                 &kp P                    &kp BSLH
+&kp ESC    &rpi LEFT_COMMAND A  &rpi LEFT_CONTROL S  &rpi LEFT_ALT D  &rpi LEFT_SHIFT F  &kp G   &kp LEFT_PARENTHESIS  &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &kp RIGHT_PARENTHESIS  &kp H   &rpi RIGHT_SHIFT J  &rpi RIGHT_ALT K  &rpi RIGHT_CONTROL L  &rpi RIGHT_COMMAND SEMI  &kp SQT
+&kp LSHFT  &kp Z                &kp X                &kp C            &kp V              &kp B                                    &kp HOME      &kp PG_UP                                    &kp N   &kp M               &kp COMMA         &kp DOT               &kp FSLH                 &kp ENTER
+&none      &none                &kp LEFT_CONTROL     &kp LEFT_ALT     &kp LEFT_COMMAND           &kp BSPC              &mo 1      &kp END       &kp PG_DN  &mo 2      &kp SPACE                      &kp LEFT            &kp DOWN          &kp UP                &kp RIGHT                &none
             >;
         };
 
