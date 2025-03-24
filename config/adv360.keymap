@@ -1,3 +1,6 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+
 #include <dt-bindings/zmk/stp.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
@@ -8,13 +11,13 @@
 
 &mmv {
     acceleration-exponent = <1>;   // 1
-    time-to-max-speed-ms = <500>;  // 300
+    time-to-max-speed-ms = <300>;  // 300
     delay-ms = <0>;
 };
 
 &msc {
     acceleration-exponent = <1>;   // 1
-    time-to-max-speed-ms = <40>;  // 300
+    time-to-max-speed-ms = <500>;  // 300
     delay-ms = <0>;
 };
 
